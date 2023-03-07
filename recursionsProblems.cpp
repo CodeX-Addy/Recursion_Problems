@@ -43,8 +43,8 @@ void printCount(int n){
     if(n==0)
      return ;
      
-    cout << n << " ";
     printCount(n-1);
+    cout << n << " ";
 }
 
 
