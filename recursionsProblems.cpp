@@ -36,14 +36,14 @@ int main() {
     return 0;
 }
 
-// Print counting
+// Print counting using head recursion
 #include <iostream>
 using namespace std;
 void printCount(int n){
     if(n==0)
      return ;
      
-    printCount(n-1);
+    printCount(n-1);// The case of head recursion
     cout << n << " ";
 }
 
@@ -52,7 +52,23 @@ int main() {
     int n;
     cin >> n;
     printCount(n);
-    
+    return 0;
+}
 
+// Print counting using tail recursion
+#include <iostream>
+using namespace std;
+void printCount(int n){
+    if(n==0)
+     return ;
+    cout << n << " ";
+    printCount(n-1);// The case of tail recursion
+}
+
+
+int main() {
+    int n;
+    cin >> n;
+    printCount(n);
     return 0;
 }
