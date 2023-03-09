@@ -1,1 +1,1 @@
-This repo includes the implementation of various concepts on Recursions.
+This repo includes the implementation of various concepts on recursions.
