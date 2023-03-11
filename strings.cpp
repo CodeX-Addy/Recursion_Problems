@@ -65,3 +65,35 @@ int main() {
 
     return 0;
 }
+
+// Using single pointer approach
+#include <iostream>
+using namespace std;
+
+bool checkPalindrome(string str, int i){
+    // Base case 
+    int n = str.length()-1;
+    if(i>n-i)
+     return true;
+     
+    if(str[i] != str[n-i])
+     return false;
+     
+    else{
+        return checkPalindrome(str,i+1);
+    }
+}
+
+
+int main() {
+    string str = "abba";
+    bool ifPalindrome = checkPalindrome(str, 0);
+    if(ifPalindrome){
+        cout << "The given string is a palindrome" << endl;
+    }
+    else{
+        cout << "The given string is not a palindrome" << endl;
+    }
+
+    return 0;
+}
