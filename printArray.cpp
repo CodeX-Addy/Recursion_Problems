@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
-
+//Prints array
 void printArray(int arr[], int n){
     if(n <= 0) return;
     cout << *arr << " ";
     printArray(arr+1, n-1);
 }
+
+//Prints reverse array
 void printArrayReverse(int arr[], int n){
     if(n <= 0) return;
      printArray(arr+1, n-1);
