@@ -86,3 +86,28 @@ int main(){
     int arr[] = {10,20,30,40,50};
     printDouble(arr, 5, 0);
 }
+
+
+//Pushing even numbers from an array to a vetor
+#include<iostream>
+using namespace std;
+#include<vector>
+void solve(int arr[], int n, int ind, vector<int> &v){
+    if(ind >= n) return;
+    
+    if(arr[ind]%2 == 0){
+            v.push_back(arr[ind]);
+    }
+    solve(arr, n, ind+1, v);
+}
+
+int main(){
+    int arr[] = {10,20,30,40,50};
+    vector<int> v;
+    
+    solve(arr, 5, 0, v);
+    
+    for(int a:v){
+        cout << a << " ";
+    }
+}
