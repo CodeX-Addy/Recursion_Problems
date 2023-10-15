@@ -28,6 +28,24 @@ int main() {
     return 0;
 }
 
+//Returning index rather than true or false while searching a target
+#include<iostream>
+using namespace std;
+void linearSearch(int arr[], int n, int key, int ind){
+    if(ind>=n) return ;
+    
+    if(arr[ind] == key) cout << ind << " ";
+    
+    linearSearch(arr, n, key, ind+1);
+}
+int main(){
+    int arr[] = {10,20,30,40,20,20,50};
+    int n = 7;
+    linearSearch(arr, n, 20, 0);
+    
+}
+
+
 // BINARY SEARCH
 #include <iostream>
 using namespace std;
