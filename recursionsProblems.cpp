@@ -72,3 +72,17 @@ int main() {
     printCount(n);
     return 0;
 }
+
+//Printing array with double elements
+#include<iostream>
+using namespace std;
+void printDouble(int *arr, int n, int ind){
+    if(ind >= n) return;
+    
+    cout << 2*arr[ind] << " ";
+    printDouble(arr, n, ind+1);
+}
+int main(){
+    int arr[] = {10,20,30,40,50};
+    printDouble(arr, 5, 0);
+}
