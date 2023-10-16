@@ -8,12 +8,22 @@ void findSubseq(string str, string out, int ind){
     }
     
     char ch = str[ind];
-    //exclude
-    findSubseq(str, out, ind+1);
     
-    //include
+    // //exclude first
+    // findSubseq(str, out, ind+1);
+    
+    // //then include
+    // out.push_back(ch);
+    // findSubseq(str, out, ind+1);
+
+    //include first
     out.push_back(ch);
     findSubseq(str, out, ind+1);
+    //then exclude
+    out.pop_back(ch);
+    findSubseq(str, out, ind+1);
+
+    
 }
 
 int main() {
