@@ -5,15 +5,13 @@ bool checkSorted(int arr[], int n, int ind){
   //base case
   if(ind>=n) return true;
 
-  //Ek case solve ho gya 
   if(arr[ind] < arr[ind+1]){
     return checkSorted(arr, n, ind+1);;
   }
   else{
     return false;
   }
- 
-}
+ }
 
 int main(){
   int arr[] = {10};
