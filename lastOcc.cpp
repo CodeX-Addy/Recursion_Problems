@@ -30,9 +30,7 @@ using namespace std;
 //     cout << ans << endl;
 // }
 
-//right to left
-
-
+//Right to left
 void lastOcc(string s, char ch, int i, int& ans){
     
     
