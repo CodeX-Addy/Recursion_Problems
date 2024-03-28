@@ -4,7 +4,8 @@
 #include<algorithm>
 using namespace std;
 
-int buyAndSell(vector<int>&v){
+//Iterative approach
+int buyAndSellIterative(vector<int>&v){
     int buy = v[0];
     int profit = 0;
 
