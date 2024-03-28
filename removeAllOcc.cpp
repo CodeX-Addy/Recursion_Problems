@@ -2,6 +2,20 @@
 #include<string>
 using namespace std;
 
+//Recursive solution
+void removeOccRec(string&str, string&part){
+    //one case solve
+    int found = str.find(part);
+    if(found != string::npos){
+        string left = str.substr(0, found);
+        string right = str.substr(found+part.size(), str.size());
+        str = left + right;
+        removeOccRec(str, part);
+    }
+    else
+        return;
+}
+
 //Iterative solution
 
 string removeOccIterative(string&str, string&part){
@@ -16,5 +30,6 @@ string removeOccIterative(string&str, string&part){
 int main(){
     string str = "bababcbaadbabcdaa";
     string part = "abc";
-    cout << removeOccIterative(str, part);
+    removeOccRec(str, part);
+    cout << str;
 }
