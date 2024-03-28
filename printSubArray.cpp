@@ -1,23 +1,30 @@
- void printSubArray_util(vector<int> nums, int s, int e){
-//     //base case
-    if(e == nums.size()) return;
-    
-    //ek case solve krlo
-    for(int i=s; i<=e; ++i){
-        cout << nums[i] << " ";
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void printSubArray_util(vector<int>&v, int s, int e){
+    //base case
+    if(e==v.size())
+        return;
+
+    //one case tackled
+    for(int i = s; i<=e; ++i){
+        cout << v[i] << " ";
     }
     cout << endl;
-    
-    printSubArray_util(nums, s, e+1);
+
+    //recursive call
+    printSubArray_util(v, s, e+1);
 }
 
-void printSubArray(vector<int> &nums){
-    for(int start = 0; start<=nums.size(); ++start){
-        int end = start;
-        printSubArray_util(nums, start, end);
+void printSubArray(vector<int>&v){
+    for(int i=0; i<v.size(); ++i){
+        int j = i;
+        printSubArray_util(v, i, j);
     }
 }
+
 int main(){
-    vector<int> v{1,2,3,4,5};
+    vector<int>v = {1,2,3,4,5};
     printSubArray(v);
 }
